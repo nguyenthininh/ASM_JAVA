@@ -1,7 +1,7 @@
 package com.demo.entity;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "users")
@@ -19,7 +19,7 @@ public class UserEntity {
     private String email;
 
     @Column(name = "createdDate")
-    private Date createDate;
+    private LocalDate createDate;
 
     @Column(name = "is_active")
     private int is_active;
@@ -30,7 +30,7 @@ public class UserEntity {
     public UserEntity() {
     }
 
-    public UserEntity(int id, String name, String phone, String email, Date createDate, int is_active, int role) {
+    public UserEntity(int id, String name, String phone, String email, LocalDate createDate, int is_active, int role) {
         this.id = id;
         this.name = name;
         this.phone = phone;
@@ -72,11 +72,11 @@ public class UserEntity {
         this.email = email;
     }
 
-    public Date getCreateDate() {
+    public LocalDate getCreateDate() {
         return createDate;
     }
 
-    public void setCreateDate(Date createDate) {
+    public void setCreateDate(LocalDate createDate) {
         this.createDate = createDate;
     }
 
